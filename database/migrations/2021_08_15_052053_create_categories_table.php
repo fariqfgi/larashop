@@ -19,8 +19,8 @@ class CreateCategoriesTable extends Migration
             $table->string("slug")->unique();
             $table->string("image")->nullable()->comment("berisi nama file image saja tanpa path");
             $table->integer("created_by");
-            $table->integer("updated_by");
-            $table->integer("deleted_by");
+            $table->integer("updated_by")->nullable();
+            $table->integer("deleted_by")->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
