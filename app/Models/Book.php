@@ -4,20 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class Book extends Model
 {
     use HasFactory;
-    use SoftDeletes;
-
+    
     /**
-     * The books that belong to the Category
+     * The categories that belong to the Book
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function books()
+    public function categories()
     {
-        return $this->belongsToMany(Book::class);
+        return $this->belongsToMany(Category::class);
     }
 }
