@@ -27,7 +27,7 @@ Users list
         </div>
     </div>
 </form>
-
+<hr class="my-3">
 <div class="row">
     <div class="col-md-12 text-right">
         <a href="{{route('users.create')}}" class="btn btn-primary">Create user</a>
